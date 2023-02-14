@@ -13,17 +13,6 @@ public class ObstacleSpecial : MonoBehaviour
     public GameObject correctObject;
     [Space(10)]
     public List<Transform> tipTransforms = new List<Transform>();
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TipConnected()
     {
         connectedTips++;
@@ -44,7 +33,7 @@ public class ObstacleSpecial : MonoBehaviour
         }
     }
 
-    public void ClearedObstacle()
+    private void ClearedObstacle()
     {
         wrongObject.SetActive(false);
         correctObject.SetActive(true);
